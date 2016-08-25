@@ -14,7 +14,7 @@ The script works by tying into inotify on the NAS, which is a kernel subsystem t
 2. You'll need to install the "pynotify" Python module.  The easiest way is to install the Python EasyInstall utility; Shell into your server, and run:
  `wget https://bootstrap.pypa.io/ez_setup.py -O - | python3` then run: `easy_install pyinotify`
 
-3. Save the `plex_inotify.py` script somewhere on your NAS/fileserver, e.g. `/usr/local/bin` 
+3. Save the `plex-inotify.py` script somewhere on your NAS/fileserver, e.g. `/usr/local/bin` 
 
 4. Edit the `plex_server_host` variable near the top of your script to match the IP address of your Plex Server.  If you have local DNS resolution, you can use a hostname instead.
 
@@ -22,7 +22,7 @@ The script works by tying into inotify on the NAS, which is a kernel subsystem t
 
 6. You should change the `daemonize` variable to `False` for testing purposes until you're sure that everything is working properly.
 
-7. Try running the script with `python3 plex_inotify.py`, and if all goes well, it will load up without errors :)
+7. Try running the script with `python3 plex-inotify.py`, and if all goes well, it will load up without errors :)
 
 If you set `daemonize` to `True`, then the script will fork itself into a background task when you run it.  It will stay running even if you log out of the shell.
 
